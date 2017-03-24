@@ -1,0 +1,12 @@
+.profile-page {
+  position: relative;
+
+  color: white;
+
+  @include container-fluid();
+
+  &__wrapper {
+    @include container();
+    @include row();
+  }
+}

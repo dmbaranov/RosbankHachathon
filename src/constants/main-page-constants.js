@@ -1,0 +1,1 @@
+export const GET_PROJECT_FULL_INFO = 'projectFull/GET_PROJECT_FULL_INFO';

@@ -1,0 +1,17 @@
+.main-page {
+  position: relative;
+
+  @include container-fluid();
+
+  &__wrapper {
+    @include container();
+    @include row();
+  }
+
+  &__welcome-word {
+    margin-top: 50px;
+
+    text-align: center;
+    @include xs-col(24);
+  }
+}

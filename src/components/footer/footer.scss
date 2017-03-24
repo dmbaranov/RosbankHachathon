@@ -1,0 +1,54 @@
+.footer {
+  height: 15vh;
+
+  color: $colorWhite;
+  text-align: center;
+
+  background: $colorBlack60;
+
+  @include container-fluid();
+  @include row();
+
+  &__wrapper {
+    @include container();
+    @include row();
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    align-self: center;
+    @include xs-col(12, 0);
+
+    &._left {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: center;
+    }
+
+    &._right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__social {
+    margin-right: 10px;
+
+    & object {
+      width: 25px;
+      height: 25px;
+      padding: 10px;
+
+      background: $colorBlack20;
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    color: $colorGray80;
+    text-align: start;
+
+    @include xs-col(24);
+  }
+}

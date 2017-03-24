@@ -1,0 +1,7 @@
+.profile-page-block {
+  margin-top: 20px;
+
+  background: white;
+  border-radius: 5px;
+  @include xs-col(24);
+}

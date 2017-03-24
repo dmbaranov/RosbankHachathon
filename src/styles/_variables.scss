@@ -1,0 +1,26 @@
+// Devices
+$sm-device: 576px;
+$md-device: 768px;
+$lg-device: 992px;
+$xl-device: 1200px;
+
+// Grid
+$amount-of-columns: 24;
+$gutters: 20px;
+
+// Colors
+$colorBlack: #000000;
+$colorBlack20: #333333;
+$colorBlack60: #1d1c1c;
+$colorBlack80: #191919;
+$colorWhite: #ffffff;
+$colorWhite50: rgba(255, 255, 255, 0.5);
+$colorGray: #e6e6e6;
+$colorGray20: #c0c0c0;
+$colorGray80: #424242;
+
+  // Animation
+$animationDuration: 3s;
+
+// Static
+$imgPath: "../static/img";

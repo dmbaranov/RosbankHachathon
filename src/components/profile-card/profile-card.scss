@@ -1,0 +1,58 @@
+.profile-card {
+  position: relative;
+
+  color: black;
+  @include row();
+  @include xs-col(24, 0);
+
+  &__avatar {
+    margin: 70px 50px;
+
+    width: 150px;
+    height: 150px;
+
+    & img {
+      border-radius: 50%;
+    }
+  }
+
+  &__data {
+    margin: 45px 0;
+
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    @include xs-col(6);
+
+    &-name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  &__chart {
+    position: absolute;
+    top: 0;
+    right: 100px;
+
+    width: 120px;
+
+    text-align: center;
+    color: white;
+
+    background: blue;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    &-top {
+      background: red;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    &-top-number {
+      font-size: 45px;
+      font-weight: bold;
+    }
+  }
+}

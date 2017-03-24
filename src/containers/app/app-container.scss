@@ -1,0 +1,19 @@
+.app-container {
+  position: relative;
+
+  background: #e6e6e6;
+
+  @include container-fluid();
+  @include row();
+
+  &__content {
+    position: relative;
+    margin-top: 5vh;
+    left: 20vw;
+
+    width: 80vw;
+    min-height: 95vh;
+
+    color: white;
+  }
+}

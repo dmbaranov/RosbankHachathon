@@ -1,0 +1,170 @@
+@mixin _col-helper($cols, $gut) {
+  //width: calc(#{$cols / $amount-of-columns * 100%});
+  flex-basis: calc(#{$cols / $amount-of-columns * 100%});
+  max-width: calc(#{$cols / $amount-of-columns * 100%});
+  margin-left: $gut;
+  margin-right: $gut;
+}
+
+@mixin _offset-helper($cols) {
+  margin-left: calc(#{$cols / $amount-of-columns * 100%} + #{$gutters});
+}
+
+@mixin _hidden_helper() {
+  display: none !important;
+}
+
+@mixin _no-gutters-helper() {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+@mixin container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq-sm {
+    width: $sm-device - 18px;
+    flex-basis: $sm-device - 18px;
+  }
+
+  @include mq-md {
+    width: $md-device - 22px;
+    flex-basis: $md-device - 22px;
+  }
+
+  @include mq-lg {
+    width: $lg-device - 30px;
+    flex-basis: $lg-device - 30px;
+  }
+
+  @include mq-xl {
+    width: $xl-device - 40px;
+    flex-basis: $xl-device - 40px;
+  }
+}
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 1px;
+}
+
+@mixin xs-col($cols, $gut: $gutters) {
+  @include _col-helper($cols, $gut);
+}
+
+@mixin sm-col($cols, $gut: $gutters) {
+  @include mq-sm {
+    @include _col-helper($cols, $gut);
+  }
+}
+
+@mixin md-col($cols, $gut: $gutters) {
+  @include mq-md {
+    @include _col-helper($cols, $gut);
+  }
+}
+
+@mixin lg-col($cols, $gut: $gutters) {
+  @include mq-lg {
+    @include _col-helper($cols, $gut);
+  }
+}
+
+@mixin xl-col($cols, $gut: $gutters) {
+  @include mq-xl {
+    @include _col-helper($cols, $gut);
+  }
+}
+
+@mixin xs-offset($cols) {
+  @include _offset-helper($cols);
+}
+
+@mixin sm-offset($cols) {
+  @include mq-sm {
+    @include _offset-helper($cols);
+  }
+}
+
+@mixin md-offset($cols) {
+  @include mq-md {
+    @include _offset-helper($cols);
+  }
+}
+
+@mixin lg-offset($cols) {
+  @include mq-lg {
+    @include _offset-helper($cols);
+  }
+}
+
+@mixin xl-offset($cols) {
+  @include mq-xl {
+    @include _offset-helper($cols);
+  }
+}
+
+@mixin xs-hidden() {
+  @include _hidden_helper();
+}
+
+@mixin sm-hidden() {
+  @include mq-sm {
+    @include _hidden_helper();
+  }
+}
+
+@mixin md-hidden() {
+  @include mq-md {
+    @include _hidden_helper();
+  }
+}
+
+@mixin lg-hidden() {
+  @include mq-lg {
+    @include _hidden_helper();
+  }
+}
+
+@mixin xl-hidden() {
+  @include mq-xl {
+    @include _hidden_helper();
+  }
+}
+
+@mixin xs-no-gutters() {
+  @include _no-gutters-helper();
+}
+
+@mixin sm-no-gutters() {
+  @include mq-sm {
+    @include _no-gutters-helper();
+  }
+}
+
+@mixin md-no-gutters() {
+  @include mq-md {
+    @include _no-gutters-helper();
+  }
+}
+
+@mixin lg-no-gutters() {
+  @include mq-lg {
+    @include _no-gutters-helper();
+  }
+}
+
+@mixin xl-no-gutters() {
+  @include mq-xl {
+    @include _no-gutters-helper();
+  }
+}
