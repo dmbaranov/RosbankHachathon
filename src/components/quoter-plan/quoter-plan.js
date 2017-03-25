@@ -10,7 +10,6 @@ class QuoterPlan extends Component {
           <div className='quoter-plan__progress-img'>
             <img src={quoterProgress}/>
           </div>
-          <div className='quoter-plan__progress-number'>53</div>
         </div>
       </div>
     );

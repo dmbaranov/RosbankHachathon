@@ -1,0 +1,10 @@
+.main-page-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px black;
+  @include xs-col(24);
+}

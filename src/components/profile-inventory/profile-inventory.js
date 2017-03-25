@@ -59,9 +59,6 @@ class ProfileInventory extends Component {
                   <div>Сотрудник месяца</div>
                 </div>
               </div>
-              {/*<img src={badge1}/>*/}
-              {/*<img src={badge1}/>*/}
-              {/*<img src={badge1}/>*/}
             </div>
           </div>
         </div>

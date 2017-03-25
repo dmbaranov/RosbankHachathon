@@ -1,0 +1,61 @@
+.best-department-block {
+  position: relative;
+
+  background: #e2cf91;
+
+  @include xs-col(24);
+
+  &__chart {
+    position: absolute;
+    right: 100px;
+    top: 0;
+
+    width: 150px;
+    height: 100px;
+
+    color: #e2cf91;
+    text-align: center;
+
+    background: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    &-number {
+      font-size: 40px;
+    }
+  }
+
+  &__image {
+    margin-top: 75px;
+
+    text-align: center;
+
+    @include xs-col(24);
+
+    & img {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__welcome {
+    margin-top: 25px;
+
+    @include xs-col(24);
+
+    &-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    &-text {
+      padding: 30px 90px;
+
+      color: black;
+      font-size: 20px;
+    }
+  }
+}
