@@ -6,5 +6,40 @@
   width: 80vw;
   height: 5vh;
 
-  background: white;
+  @include container-fluid();
+
+  &__wrapper {
+    @include container();
+    @include row();
+  }
+
+  &__container {
+    height: 100%;
+    padding-top: 10px;
+
+    @include xs-col(11);
+
+    &._right {
+      margin-top: 7px;
+
+      display: flex;
+    }
+  }
+
+  &__logo img {
+    width: auto;
+    height: 30px;
+  }
+
+  &__name {
+    text-align: right;
+
+    @include xs-col(18)
+  }
+
+  &__exit {
+    text-align: right;
+
+    @include xs-col(5);
+  }
 }

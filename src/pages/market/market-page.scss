@@ -1,5 +1,7 @@
-.main-page {
+.market-page {
   position: relative;
+
+  background: white;
 
   @include container-fluid();
 
@@ -8,8 +10,5 @@
     @include row();
   }
 
-  &__welcome-word {
-    text-align: center;
-    @include xs-col(24);
-  }
+  
 }

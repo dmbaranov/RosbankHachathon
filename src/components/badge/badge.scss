@@ -1,0 +1,20 @@
+.badge {
+  margin-top: 15px;
+
+  color: black;
+
+  @include xs-col(3);
+
+  &__image {
+    text-align: center;
+
+    & img {
+      width: auto;
+      height: 100px;
+    }
+  }
+
+  &__reason {
+    text-align: center;
+  }
+}
