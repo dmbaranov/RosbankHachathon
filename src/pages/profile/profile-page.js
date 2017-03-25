@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ProfileBlock from 'components/profile-page-block/profile-page-block';
 import ProfileCard from 'components/profile-card/profile-card';
+import ProfileInventory from 'components/profile-inventory/profile-inventory';
+import QuoterPlan from 'components/quoter-plan/quoter-plan';
 
 class ProfilePage extends Component {
   render() {
@@ -11,17 +13,9 @@ class ProfilePage extends Component {
             <ProfileCard/>
           </ProfileBlock>
           <ProfileBlock>
-            <ProfileCard/>
+            <ProfileInventory/>
           </ProfileBlock>
-          <ProfileBlock>
-            <ProfileCard/>
-          </ProfileBlock>
-          <ProfileBlock>
-            <ProfileCard/>
-          </ProfileBlock>
-          <ProfileBlock>
-            <ProfileCard/>
-          </ProfileBlock>
+          <QuoterPlan/>
         </div>
       </div>
     );
