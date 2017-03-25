@@ -8,11 +8,13 @@ class HorizontalMenu extends Component {
         <div className='horizontal-menu__wrapper'>
           <div className='horizontal-menu__container _left'>
             <div className='horizontal-menu__logo'>
-              <img src={rb} height='20px' width='150px'/>
+              <img src={rb}
+                   height='20px'
+                   width='150px'/>
             </div>
           </div>
           <div className='horizontal-menu__container _right'>
-            <div className='horizontal-menu__name'>Добро пожаловать, Иван</div>
+            <div className='horizontal-menu__name'>Добро пожаловать, Елена</div>
             <div className='horizontal-menu__exit'>Выход</div>
           </div>
         </div>

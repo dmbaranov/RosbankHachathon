@@ -6,11 +6,13 @@ class ProfileCard extends Component {
     return (
       <div className='profile-card'>
         <div className='profile-card__avatar'>
-          <img src={avatar} width='100%' height='100%'/>
+          <img src={avatar}
+               width='100%'
+               height='100%'/>
         </div>
         <div className='profile-card__data'>
           <div className='profile-card__data-block'>
-            <div className='profile-card__data-name'>Иван Иванов</div>
+            <div className='profile-card__data-name'>Елена Шлыкова</div>
             <div className='profile-card__data-profession'>Менеджер по продажам</div>
           </div>
           <div className='profile-card__data-block'>
@@ -24,7 +26,8 @@ class ProfileCard extends Component {
         </div>
         <div className='profile-card__chart'>
           <div className='profile-card__chart-top'>
-            <div className='profile-card__chart-top-number'>15</div> место в рейтинге отдела
+            <div className='profile-card__chart-top-number'>15</div>
+            <div className='profile-card__chart-top-text'>место в рейтинге отдела</div>
           </div>
           <div className='profile-card__chart-bottom'>
             235 место в общем рейтинге

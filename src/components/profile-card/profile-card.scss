@@ -29,6 +29,18 @@
       font-size: 24px;
       font-weight: bold;
     }
+
+    &-email {
+      color: #666666
+    }
+
+    &-phone {
+      color: #666666;
+    }
+  }
+
+  &__duties-content {
+    color: #666666;
   }
 
   &__chart {
@@ -36,23 +48,33 @@
     top: 0;
     right: 100px;
 
-    width: 120px;
+    width: 150px;
 
     text-align: center;
     color: white;
 
-    background: blue;
+    background: #848417;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 
     &-top {
-      background: red;
+      padding-bottom: 10px;
+
+      background: #e2cf91;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
+
+      &-text {
+        padding: 0 10px;
+      }
     }
     &-top-number {
       font-size: 45px;
       font-weight: bold;
+    }
+
+    &-bottom {
+      padding: 25px 10px;
     }
   }
 }

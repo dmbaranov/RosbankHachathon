@@ -1,0 +1,16 @@
+.market-item {
+  color: black;
+
+  background: red;
+
+  @include xs-col(5);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+  }
+}

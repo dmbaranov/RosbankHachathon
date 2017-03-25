@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-import profile from 'static/img/profile.png';
+import ReactSVG from 'react-svg';
+import profile from 'static/img/profile.svg';
 
 class VerticalMenu extends Component {
   static MENU_BUTTONS = [{
-    label: 'Главная',
-    url: '/'
-  }, {
     label: 'Профиль',
     url: '/profile'
   }, {
@@ -32,9 +30,15 @@ class VerticalMenu extends Component {
   generateMenuButtons() {
     return VerticalMenu.MENU_BUTTONS.map((item, index) => {
       return (
-        <Link to={item.url} key={index} className='vertical-menu__item'>
-          <img src={profile} className='vertical-menu__item-icon'/>
-          {item.label}
+        <Link to={item.url}
+              key={index}
+              className='vertical-menu__item'>
+          <div className='vertical-menu__item-icon'>
+            <ReactSVG path={profile}/>
+          </div>
+          <div className='vertical-menu__item-text'>
+            {item.label}
+          </div>
         </Link>
       );
     });
@@ -44,10 +48,9 @@ class VerticalMenu extends Component {
     return (
       <div className='vertical-menu'>
         <div className='vertical-menu__container _top'>
-           <div className='vertical-menu__item _logo'>
+           <Link to='/' className='vertical-menu__item _logo'>
              PLAY-Bank
-             {/*<img alt='icon' src={rb} width='80%' height='80%'/>*/}
-           </div>
+           </Link>
         </div>
         <div className='vertical-menu__container _center'>
           {this.generateMenuButtons()}
