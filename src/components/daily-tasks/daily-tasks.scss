@@ -1,0 +1,77 @@
+.daily-tasks {
+  @include xs-col(24);
+
+  &__header {
+    display: flex;
+    padding: 20px 0;
+
+    font-size: 20px;
+    color: #967e48;
+    line-height: 26px;
+
+    background: #e2cf91;
+    border-radius: 5px;
+
+    &-title {
+      text-align: center;
+      font-size: 26px;
+
+      @include xs-col(6, 0);
+    }
+
+    &-current {
+      text-align: left;
+      @include xs-col(12, 0);
+    }
+
+    &-completed {
+      @include xs-col(5, 0);
+      @include xs-offset(1);
+    }
+  }
+
+  &__content {
+    background: white;
+
+    @include row();
+  }
+
+  &__line {
+    margin-bottom: 20px;
+
+    align-items: center;
+
+    @include row();
+
+    &-title {
+      color: black;
+      text-align: center;
+
+      @include xs-col(6, 0);
+
+      & div {
+        padding: 0 40px;
+      }
+    }
+
+    &-progress {
+      @include xs-col(12, 0);
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+
+      &._completed img {
+        width: 103%;
+      }
+    }
+
+    &-total {
+      color: black;
+      text-align: center;
+
+      @include xs-col(6, 0);
+    }
+  }
+}

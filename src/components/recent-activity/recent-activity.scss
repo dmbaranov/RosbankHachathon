@@ -1,0 +1,34 @@
+.recent-activity {
+  margin: 20px;
+
+  color: black;
+  font-size: 20px;
+
+  @include xs-col(10);
+  @include xs-offset(6);
+
+  &__content {
+    margin-top: 20px;
+  }
+
+  &__item {
+    position: relative;
+    @include row();
+    @include xs-col(24, 0);
+
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #b1ba1d;
+      content: '';
+    }
+
+    &-text {
+      color: #666666;
+      @include xs-col(24, 0);
+    }
+  }
+}

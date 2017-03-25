@@ -17,14 +17,51 @@ class ProfileInventory extends Component {
           <div className='profile-inventory__block-title'>Мои значки</div>
           <div className='profile-inventory__block-content'>
             <div className='profile-inventory__block-badges'>
-              <img src={badge1}/>
-              <img src={badge1}/>
-              <img src={badge1}/>
+              <div className='profile-inventory__badge'>
+                <div className='profile-inventory__badge-img'>
+                  <img src={badge1}/>
+                </div>
+                <div className='profile-inventory__badge-text'>
+                  <div>Сотрудник месяца</div>
+                </div>
+              </div>
+              <div className='profile-inventory__badge'>
+                <div className='profile-inventory__badge-img'>
+                  <img src={badge1}/>
+                </div>
+                <div className='profile-inventory__badge-text'>
+                  <div>Сотрудник месяца</div>
+                </div>
+              </div>
             </div>
             <div className='profile-inventory__block-badges _second'>
-              <img src={badge1}/>
-              <img src={badge1}/>
-              <img src={badge1}/>
+              <div className='profile-inventory__badge'>
+                <div className='profile-inventory__badge-img'>
+                  <img src={badge1}/>
+                </div>
+                <div className='profile-inventory__badge-text'>
+                  <div>Сотрудник месяца</div>
+                </div>
+              </div>
+              <div className='profile-inventory__badge'>
+                <div className='profile-inventory__badge-img'>
+                  <img src={badge1}/>
+                </div>
+                <div className='profile-inventory__badge-text'>
+                  <div>Сотрудник месяца</div>
+                </div>
+              </div>
+              <div className='profile-inventory__badge'>
+                <div className='profile-inventory__badge-img'>
+                  <img src={badge1}/>
+                </div>
+                <div className='profile-inventory__badge-text'>
+                  <div>Сотрудник месяца</div>
+                </div>
+              </div>
+              {/*<img src={badge1}/>*/}
+              {/*<img src={badge1}/>*/}
+              {/*<img src={badge1}/>*/}
             </div>
           </div>
         </div>
