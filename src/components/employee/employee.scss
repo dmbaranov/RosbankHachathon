@@ -1,3 +1,27 @@
 .employee {
   position: relative;
+
+  justify-content: center;
+
+  color: black;
+
+  border-radius: 50%;
+
+  @include xs-col(4, 15px);
+
+  &__avatar {
+    @include xs-col(24);
+
+    & img {
+      width: 100%;
+      height: auto;
+
+      border-radius: 50%;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    font-weight: bold;
+  }
 }

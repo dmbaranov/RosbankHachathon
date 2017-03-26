@@ -1,14 +1,17 @@
-.best-department-block {
+.departments-page-block {
   position: relative;
   margin-bottom: 50px;
+
+  color: black;
 
   background: #e2cf91;
 
   @include xs-col(24);
+  @include row();
 
   &__chart {
     position: absolute;
-    right: 100px;
+    right: 70px;
     top: 0;
 
     width: 150px;
@@ -23,6 +26,22 @@
 
     &-number {
       font-size: 40px;
+    }
+  }
+
+  &__leader {
+    position: absolute;
+    top: 140px;
+
+    text-align: center;
+
+    @include xs-col(4);
+    @include xs-offset(1);
+
+    &-avatar img {
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
     }
   }
 
@@ -45,7 +64,8 @@
     @include xs-col(24);
 
     &-title {
-      text-align: center;
+      color: white;
+      text-align: left;
       text-transform: uppercase;
       font-size: 30px;
       font-weight: 500;
@@ -53,9 +73,9 @@
     }
 
     &-text {
-      padding: 30px 90px;
+      padding: 30px;
 
-      color: black;
+      color: #8c6435;
       font-size: 20px;
     }
   }

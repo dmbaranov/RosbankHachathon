@@ -12,4 +12,26 @@
     text-align: center;
     @include xs-col(24);
   }
+
+  &__block {
+    position: relative;
+
+    padding-bottom: 20px;
+
+    &-icon {
+      position: relative;
+      top: 10px;
+      left: -20px;
+    }
+
+    &-content {
+      justify-content: flex-end;
+
+      @include row();
+
+      &._departments {
+        justify-content: center;
+      }
+    }
+  }
 }

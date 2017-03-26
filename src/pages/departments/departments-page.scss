@@ -1,0 +1,8 @@
+.departments-page {
+  @include container-fluid();
+
+  &__wrapper {
+    @include container();
+    @include row();
+  }
+}

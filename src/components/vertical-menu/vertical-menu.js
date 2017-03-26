@@ -9,7 +9,7 @@ class VerticalMenu extends Component {
     url: '/profile'
   }, {
     label: 'Отдел',
-    url: '#'
+    url: '/departments'
   }, {
     label: 'Маркет',
     url: '/market'
