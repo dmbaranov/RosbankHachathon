@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import avatar from 'static/img/avatar.jpg';
 
 class Employee extends Component {
   render() {
+    const image = require(`static/img/users/${this.props.index + 1}.jpeg`);
     return (
       <div className='employee'>
         <div className='employee__avatar'>
-          <img src={avatar}/>
+          <img src={image}/>
         </div>
-        <div className='employee__name'>Анна Петрова</div>
-        <div className='employee__position'>Менеджер по продажам</div>
+        <div className='employee__name'>{this.props.data.name} {this.props.data.surname}</div>
+        <div className='employee__position'>{this.props.data.position}</div>
       </div>
     );
   }

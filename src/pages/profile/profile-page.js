@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ProfileBlock from 'components/profile-page-block/profile-page-block';
 import ProfileCard from 'components/profile-card/profile-card';
 import ProfileInventory from 'components/profile-inventory/profile-inventory';
@@ -8,14 +9,15 @@ import RecentActivity from 'components/recent-activity/recent-activity';
 
 class ProfilePage extends Component {
   render() {
+    console.log(this.props.user);
     return (
       <div className='profile-page'>
         <div className='profile-page__wrapper'>
           <ProfileBlock>
-            <ProfileCard/>
+            <ProfileCard user={this.props.user}/>
           </ProfileBlock>
           <ProfileBlock>
-            <ProfileInventory/>
+            <ProfileInventory data={this.props.user}/>
           </ProfileBlock>
           <DailyTasks/>
           <RecentActivity/>
@@ -26,4 +28,11 @@ class ProfilePage extends Component {
   }
 }
 
-export default ProfilePage;
+function mapStateToProps(state) {
+  return {
+    user: state.user.user
+  };
+}
+
+export default connect(mapStateToProps, null)(ProfilePage);
+// export default ProfilePage;

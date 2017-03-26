@@ -1,5 +1,6 @@
 .employee {
   position: relative;
+  margin: 10px 0;
 
   justify-content: center;
 
@@ -23,5 +24,10 @@
   &__name {
     text-align: center;
     font-weight: bold;
+  }
+
+  &__position {
+    margin-top: 5px;
+    text-align: center;
   }
 }

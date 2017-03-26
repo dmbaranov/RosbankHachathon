@@ -54,6 +54,7 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "body-parser": "^1.17.1",
     "classnames": "^2.2.5",
     "express": "^4.15.2",

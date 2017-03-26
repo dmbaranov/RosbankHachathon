@@ -10,9 +10,17 @@ import DepartmentsPage from 'pages/departments/departments-page';
 export default (
   <Route path='/' component={App}>
     <IndexRoute component={MainPage}/>
-    <Route path='/profile' component={ProfilePage}/>
-    <Route path='/badges' component={BadgesPage}/>
-    <Route path='/market' component={MarketPage}/>
-    <Route path='/departments' component={DepartmentsPage}/>
+    <Route path='/profile'
+           component={ProfilePage}
+           onEnter={() => {window.scrollTo(0, 0);}}/>
+    <Route path='/badges'
+           component={BadgesPage}
+           onEnter={() => {window.scrollTo(0, 0);}}/>
+    <Route path='/market'
+           component={MarketPage}
+           onEnter={() => {window.scrollTo(0, 0);}}/>
+    <Route path='/departments'
+           component={DepartmentsPage}
+           onEnter={() => {window.scrollTo(0, 0);}}/>
   </Route>
 );

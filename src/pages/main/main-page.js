@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import BestDepartmentBlock from 'components/best-department-block/best-department-block';
 import MainPageBlock from 'components/main-page-block/main-page-block';
 import Employee from 'components/employee/employee';
@@ -8,6 +9,15 @@ import topDepartmentsFlag from 'static/img/top-departments-flag.png';
 
 class MainPage extends Component {
   render() {
+    const {allUsers = []} = this.props;
+    const topUsers = allUsers.slice(0, 10).map((item, index) => {
+      return (
+        <Employee key={item.id}
+                  data={item}
+                  index={index}/>
+      );
+    });
+
     return (
       <div className='main-page'>
         <div className='main-page__wrapper'>
@@ -17,16 +27,7 @@ class MainPage extends Component {
               <img src={topEmployeesFlag}/>
             </div>
             <div className='main-page__block-content'>
-              <Employee/>
-              <Employee/>
-              <Employee/>
-              <Employee/>
-              <Employee/>
-              <Employee/>
-              <Employee/>
-              <Employee/>
-              <Employee/>
-              <Employee/>
+              {topUsers}
             </div>
           </MainPageBlock>
           <MainPageBlock>
@@ -34,9 +35,9 @@ class MainPage extends Component {
               <img src={topDepartmentsFlag}/>
             </div>
             <div className='main-page__block-content _departments'>
-              <Department/>
-              <Department/>
-              <Department/>
+              <Department place={1}/>
+              <Department place={2}/>
+              <Department place={3}/>
             </div>
           </MainPageBlock>
         </div>
@@ -45,4 +46,10 @@ class MainPage extends Component {
   }
 }
 
-export default MainPage;
+function mapStateToProps(state) {
+  return {
+    allUsers: state.user.allUsers
+  };
+}
+
+export default connect(mapStateToProps, null)(MainPage);

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import avatar from 'static/img/avatar.jpg';
+import avatar from 'static/img/users/6.jpeg';
 
 class ProfileCard extends Component {
   render() {
@@ -12,25 +12,25 @@ class ProfileCard extends Component {
         </div>
         <div className='profile-card__data'>
           <div className='profile-card__data-block'>
-            <div className='profile-card__data-name'>Елена Шлыкова</div>
-            <div className='profile-card__data-profession'>Менеджер по продажам</div>
+            <div className='profile-card__data-name'>{this.props.user.name} {this.props.user.surname}</div>
+            <div className='profile-card__data-profession'>{this.props.user.position}</div>
           </div>
           <div className='profile-card__data-block'>
-            <div className='profile-card__data-email'>someemail@gmail.com</div>
-            <div className='profile-card__data-phone'>8-999-123-62-33</div>
+            <div className='profile-card__data-email'>{this.props.user.email}</div>
+            <div className='profile-card__data-phone'>{this.props.user.phone}</div>
           </div>
           <div className='profile-card__data-block'>
             <div className='profile-card__duties-title'>Обязанности</div>
-            <div className='profile-card__duties-content'>Продажа чего-то там</div>
+            <div className='profile-card__duties-content'>Формирование клиентской базы</div>
           </div>
         </div>
         <div className='profile-card__chart'>
           <div className='profile-card__chart-top'>
-            <div className='profile-card__chart-top-number'>15</div>
+            <div className='profile-card__chart-top-number'>{this.props.user.department_rating}</div>
             <div className='profile-card__chart-top-text'>место в рейтинге отдела</div>
           </div>
           <div className='profile-card__chart-bottom'>
-            235 место в общем рейтинге
+            {this.props.user.rating} место в общем рейтинге
           </div>
         </div>
       </div>

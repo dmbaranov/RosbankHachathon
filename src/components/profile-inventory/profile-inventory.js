@@ -13,7 +13,7 @@ class ProfileInventory extends Component {
           </div>
           <div className='profile-inventory__block-content _wallet'>
             <img className='profile-inventory__block-coins-image' src={wallet}/>
-            <div className='profile-inventory__block-coins-amount'>123</div>
+            <div className='profile-inventory__block-coins-amount'>{this.props.data.points}</div>
           </div>
         </div>
         <div className='profile-inventory__block _badges'>
