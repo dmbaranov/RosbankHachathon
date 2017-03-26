@@ -4614,6 +4614,12 @@ react-swipeable@^3.9.2:
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-3.9.2.tgz#bbaab62688b1aed4a4f73830d272eedd168f3627"
 
+react-table@^5.3.4:
+  version "5.3.4"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-5.3.4.tgz#1a824c76a292f6f9f182fb69d57a93a6bdeb9c06"
+  dependencies:
+    classnames "^2.2.5"
+
 react-tap-event-plugin@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-tap-event-plugin/-/react-tap-event-plugin-2.0.1.tgz#316beb3bc6556e29ec869a7293e89c826a9074d2"
@@ -4627,6 +4633,10 @@ react@^15.4.2:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+reactable@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/reactable/-/reactable-0.14.1.tgz#2ab9895e3df6da2498625de46d3691592d18c93b"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"

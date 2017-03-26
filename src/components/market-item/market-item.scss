@@ -1,16 +1,49 @@
 .market-item {
-  color: black;
+  position: relative;
+  margin: 25px 0;
 
-  background: red;
+  color: black;
 
   @include xs-col(5);
 
   &__title {
+    margin: 10px 0;
+
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   &__image img {
     width: 100%;
     height: 100%;
+
+    border-radius: 50%;
+  }
+
+  &__price {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    width: 50px;
+
+    border: 3px solid white;
+    border-radius: 50%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-number {
+      position: absolute;
+      top: 14px;
+      left: 12px;
+
+      color: white;
+      font-size: 20px;
+    }
   }
 }

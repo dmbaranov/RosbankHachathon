@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Tabs, Tab} from 'material-ui/Tabs';
-import MapsPersonPin from 'material-ui/svg-icons/maps/person-pin';
+import MarketPageBlock from 'components/market-page-block/market-page-block';
+import goodsFlag from 'static/img/goods-flag.png';
+import byDepartmentFlag from 'static/img/by-department.png';
 import MarketItem from 'components/market-item/market-item';
 
 class MarketPage extends Component {
@@ -8,28 +9,30 @@ class MarketPage extends Component {
     return (
       <div className='market-page'>
         <div className='market-page__wrapper'>
-          <div className='market-page__title'>Магазин</div>
-          <Tabs className='market-page__tabs'>
-            <Tab label='Товары'
-                 icon={<MapsPersonPin/>}
-                 style={{background: 'red', color: 'black'}}>
-              <div className='market-page__tabs-content'>
-                <MarketItem/>
-                <MarketItem/>
-                <MarketItem/>
-                <MarketItem/>
-                <MarketItem/>
-              </div>
-            </Tab>
-            <Tab label='Мои покупки'
-                 icon={<MapsPersonPin/>}
-                 style={{background: 'red', color: 'black'}}>
-              <div className='market-page__tabs-content'>
-                <MarketItem/>
-                <MarketItem/>
-              </div>
-            </Tab>
-          </Tabs>
+          <MarketPageBlock>
+            <div className='market-page__goods-icon'>
+              <img src={goodsFlag}/>
+            </div>
+            <div className='market-page__content'>
+              <MarketItem/>
+              <MarketItem/>
+              <MarketItem/>
+              <MarketItem/>
+              <MarketItem/>
+            </div>
+          </MarketPageBlock>
+          <MarketPageBlock>
+            <div className='market-page__goods-icon'>
+              <img src={byDepartmentFlag}/>
+            </div>
+            <div className='market-page__content'>
+              <MarketItem/>
+              <MarketItem/>
+              <MarketItem/>
+              <MarketItem/>
+              <MarketItem/>
+            </div>
+          </MarketPageBlock>
         </div>
       </div>
     );

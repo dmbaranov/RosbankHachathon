@@ -8,8 +8,28 @@
     @include row();
   }
 
-  &__welcome-word {
-    text-align: center;
+  &__title-flag {
+    position: relative;
+    top: 20px;
+    left: -20px;
+  }
+
+  &__description {
+    margin-top: 20px;
+
+    color: #666666;
+
     @include xs-col(24);
+  }
+
+  &__badges {
+    justify-content: center;
+
+    @include row();
+    @include xs-col(24);
+
+    &._small {
+      justify-content: flex-start;
+    }
   }
 }

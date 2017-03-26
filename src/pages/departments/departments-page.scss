@@ -1,8 +1,16 @@
 .departments-page {
+  color: black;
+
   @include container-fluid();
 
   &__wrapper {
     @include container();
     @include row();
+  }
+
+  &__empty-block-flag {
+    position: relative;
+    top: 20px;
+    left: -20px;
   }
 }

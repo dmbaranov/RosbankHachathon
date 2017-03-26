@@ -1,11 +1,24 @@
 .recent-activity {
+  position: relative;
   margin: 20px;
 
   color: black;
   font-size: 20px;
 
+  background: white;
+  box-shadow: 0 3px 10px black;
+
   @include xs-col(10);
-  @include xs-offset(6);
+
+  &__title {
+    position: relative;
+    top: 12px;
+    left: -20px;
+
+    & img {
+      width: 52%;
+    }
+  }
 
   &__content {
     margin-top: 20px;
@@ -13,22 +26,57 @@
 
   &__item {
     position: relative;
+    margin: 15px 0;
+
+    align-items: center;
+
     @include row();
     @include xs-col(24, 0);
 
-    &:after {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      background: #b1ba1d;
-      content: '';
+    &-icon {
+      display: flex;
+      align-items: center;
+
+      @include xs-col(2);
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       color: #666666;
-      @include xs-col(24, 0);
+      font-size: 16px;
+
+      @include xs-col(15, 0);
+    }
+
+    &-coin {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      text-align: center;
+
+      @include xs-col(3);
+      & img {
+        width: 50%;
+        height: 50%;
+      }
+
+      &-price {
+        position: absolute;
+        top: 6px;
+        left: 11px;
+
+        color: white;
+        font-size: 15px;
+      }
     }
   }
 }

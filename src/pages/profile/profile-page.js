@@ -8,12 +8,6 @@ import RecentActivity from 'components/recent-activity/recent-activity';
 
 class ProfilePage extends Component {
   render() {
-    fetch('http://rsb-linuxvm-13.northeurope.cloudapp.azure.com:8080/api/user?api_token=token-12').then(data => {
-      console.log(data);
-      data.json().then(result => {
-        console.log(result);
-      });
-    });
     return (
       <div className='profile-page'>
         <div className='profile-page__wrapper'>
@@ -24,8 +18,8 @@ class ProfilePage extends Component {
             <ProfileInventory/>
           </ProfileBlock>
           <DailyTasks/>
-          <QuoterPlan/>
           <RecentActivity/>
+          <QuoterPlan/>
         </div>
       </div>
     );

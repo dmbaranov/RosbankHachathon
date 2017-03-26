@@ -1,8 +1,6 @@
 .market-page {
   position: relative;
 
-  background: white;
-
   @include container-fluid();
 
   &__wrapper {
@@ -10,16 +8,25 @@
     @include row();
   }
 
-  &__title {
-    padding: 30px;
-
-    color: black;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-
-    @include xs-col(24);
+  &__goods-icon {
+    position: relative;
+    top: 20px;
+    left: -20px;
   }
+
+  &__content {
+    @include row();
+  }
+  //&__title {
+  //  padding: 30px;
+  //
+  //  color: black;
+  //  font-size: 40px;
+  //  font-weight: bold;
+  //  text-align: center;
+  //
+  //  @include xs-col(24);
+  //}
 
   &__tabs {
     width: 100%;

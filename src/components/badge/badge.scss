@@ -1,20 +1,59 @@
 .badge {
-  margin-top: 15px;
+  position: relative;
+  margin: 15px 0;
 
   color: black;
 
-  @include xs-col(3);
+  @include xs-col(5);
 
   &__image {
     text-align: center;
 
     & img {
       width: auto;
-      height: 100px;
+      height: 150px;
     }
   }
 
   &__reason {
+    margin-top: 15px;
+
     text-align: center;
+  }
+
+  &__price {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+
+    width: 50px;
+    height: 50px;
+
+    color: white;
+
+    z-index: 2;
+
+    & img {
+      position: absolute;
+      top: -30px;
+      left: -30px;
+
+      z-index: -1;
+    }
+  }
+
+  &._small {
+    @include xs-col(3);
+  }
+
+  &._small & {
+    &__image img {
+      height: 100px;
+    }
+
+    &__price {
+      bottom: 15px;
+      left: 0;
+    }
   }
 }
