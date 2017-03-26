@@ -14,11 +14,12 @@ class MarketPage extends Component {
               <img src={goodsFlag}/>
             </div>
             <div className='market-page__content'>
-              <MarketItem/>
-              <MarketItem/>
-              <MarketItem/>
-              <MarketItem/>
-              <MarketItem/>
+              <MarketItem title='Подарочная корзина от Loccitane' img={1}/>
+              <MarketItem title='Скидка 20 % на посещение фитнес-клуба ALEX FITNESS' img={2}/>
+              <MarketItem title='Путешествие в Таиланд' img={3}/>
+              <MarketItem title='Скидка 50% на посуду марки Luminarc' img={7}/>
+              <MarketItem title='2 билета в Большой театр' img={8}/>
+              <MarketItem title='Посещение тренинга по продажам' img={9}/>
             </div>
           </MarketPageBlock>
           <MarketPageBlock>
@@ -26,11 +27,10 @@ class MarketPage extends Component {
               <img src={byDepartmentFlag}/>
             </div>
             <div className='market-page__content'>
-              <MarketItem/>
-              <MarketItem/>
-              <MarketItem/>
-              <MarketItem/>
-              <MarketItem/>
+              <MarketItem title='Дополнительный оплачиваемый отпуск' img={4}/>
+              <MarketItem title='3 пятничных «отгула»' img={5}/>
+              <MarketItem title='Чашечка кофе с Начальником отдела' img={6}/>
+              <MarketItem title='1 день в роли Начальника отдела' img={10}/>
             </div>
           </MarketPageBlock>
         </div>

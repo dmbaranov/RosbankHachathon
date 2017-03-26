@@ -19,7 +19,7 @@ class RecentActivity extends Component {
             </div>
             <div className='recent-activity__item-text'>Скидка 70% на посуду "Ральф"</div>
             <div className='recent-activity__item-coin'>
-              <div className='recent-activity__item-coin-price'>5</div>
+              <div className='recent-activity__item-coin-price'>15</div>
               <img src={coin}/>
             </div>
           </div>
@@ -29,7 +29,7 @@ class RecentActivity extends Component {
             </div>
             <div className='recent-activity__item-text'>Подарочная корзина от Loccitane</div>
             <div className='recent-activity__item-coin'>
-              <div className='recent-activity__item-coin-price'>5</div>
+              <div className='recent-activity__item-coin-price'>15</div>
               <img src={coin}/>
             </div>
           </div>
@@ -39,7 +39,7 @@ class RecentActivity extends Component {
             </div>
             <div className='recent-activity__item-text'>2 билета в Большой Театр</div>
             <div className='recent-activity__item-coin'>
-              <div className='recent-activity__item-coin-price'>5</div>
+              <div className='recent-activity__item-coin-price'>15</div>
               <img src={coin}/>
             </div>
           </div>

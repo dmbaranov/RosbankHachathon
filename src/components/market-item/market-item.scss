@@ -2,6 +2,8 @@
   position: relative;
   margin: 25px 0;
 
+  min-height: 370px;
+
   color: black;
 
   @include xs-col(5);

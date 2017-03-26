@@ -1,0 +1,1 @@
+export const GET_GOODS = 'marketConstants/GET_GOODS';

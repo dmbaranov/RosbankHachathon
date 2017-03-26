@@ -15,7 +15,7 @@ class DepartmentsPageBlock extends Component {
             <img src={avatar}/>
           </div>
           <div className='departments-page-block__leader-name'>Скобеева Анна</div>
-          <div className='departments-page-block__leader-position'>руководитель</div>
+          <div className='departments-page-block__leader-position'>начальник отдела</div>
         </div>
         <div className='departments-page-block__image'>
           <img src={topDepartment}/>

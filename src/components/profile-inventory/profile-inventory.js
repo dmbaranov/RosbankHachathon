@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import wallet from 'static/img/wallet.png';
-import badge1 from 'static/img/badge1.jpg';
+import badge1 from 'static/img/badges/13.png';
+import badge2 from 'static/img/badges/14.png';
+import badge3 from 'static/img/badges/1.png';
+import badge4 from 'static/img/badges/2.png';
+import badge5 from 'static/img/badges/3.png';
 import myCoins from 'static/img/my-coins.png';
+
 
 class ProfileInventory extends Component {
   render() {
@@ -25,41 +30,41 @@ class ProfileInventory extends Component {
                   <img src={badge1}/>
                 </div>
                 <div className='profile-inventory__badge-text'>
-                  <div>Сотрудник месяца</div>
+                  <div>Привлечение крупных клиентов</div>
                 </div>
               </div>
               <div className='profile-inventory__badge'>
                 <div className='profile-inventory__badge-img'>
-                  <img src={badge1}/>
+                  <img src={badge2}/>
                 </div>
                 <div className='profile-inventory__badge-text'>
-                  <div>Сотрудник месяца</div>
+                  <div>Крупная сделка</div>
                 </div>
               </div>
             </div>
             <div className='profile-inventory__block-badges _second'>
               <div className='profile-inventory__badge'>
                 <div className='profile-inventory__badge-img'>
-                  <img src={badge1}/>
+                  <img src={badge3}/>
                 </div>
                 <div className='profile-inventory__badge-text'>
-                  <div>Сотрудник месяца</div>
+                  <div>Строгий dress-код в течении месяца</div>
                 </div>
               </div>
               <div className='profile-inventory__badge'>
                 <div className='profile-inventory__badge-img'>
-                  <img src={badge1}/>
+                  <img src={badge4}/>
                 </div>
                 <div className='profile-inventory__badge-text'>
-                  <div>Сотрудник месяца</div>
+                  <div>Украшение офиса к Новому Году</div>
                 </div>
               </div>
               <div className='profile-inventory__badge'>
                 <div className='profile-inventory__badge-img'>
-                  <img src={badge1}/>
+                  <img src={badge5}/>
                 </div>
                 <div className='profile-inventory__badge-text'>
-                  <div>Сотрудник месяца</div>
+                  <div>Год без больничного отпуска</div>
                 </div>
               </div>
             </div>

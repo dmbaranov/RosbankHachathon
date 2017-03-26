@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import BadgesPageBlock from 'components/badges-page-block/badges-page-block';
 import BadgeComponent from 'components/badge/badge';
 import professionalBadges from 'static/img/professional-badges.png';
@@ -6,6 +7,32 @@ import corporativeBadges from 'static/img/corporative-badges.png';
 
 class BadgesPage extends Component {
   render() {
+    const normalBadges = [];
+    const hardBadges = [];
+    this.props.badges.forEach(item => {
+      const badgeType = item[2];
+      if (badgeType === 1) {
+        normalBadges.push(item);
+      }
+      else {
+        hardBadges.push(item);
+      }
+    });
+
+    const normalElements = normalBadges.map(item => {
+      return (
+        <BadgeComponent key={item[1]}
+                        data={item}
+                        small/>
+      );
+    });
+
+    const hardElements = hardBadges.map(item => {
+      return (
+        <BadgeComponent key={item[1]} data={item}/>
+      );
+    });
+
     return (
       <div className='badges-page'>
         <div className='badges-page__wrapper'>
@@ -17,10 +44,7 @@ class BadgesPage extends Component {
               За определенные задания и заслуги можно получить не только баллы, но и почетные значки. Однажды полученные, они навсегда остаются в Вашем профиле, и каждый сотрудник может видеть Ваши заслуги!
             </div>
             <div className='badges-page__badges'>
-              <BadgeComponent/>
-              <BadgeComponent/>
-              <BadgeComponent/>
-              <BadgeComponent/>
+              {hardElements}
             </div>
           </BadgesPageBlock>
           <BadgesPageBlock>
@@ -28,17 +52,10 @@ class BadgesPage extends Component {
               <img src={corporativeBadges}/>
             </div>
             <div className='badges-page__description'>
-              За определенные задания и заслуги можно получить не только баллы, но и почетные значки. Однажды полученные, они навсегда остаются в Вашем профиле, и каждый сотрудник может видеть Ваши заслуги!
+              Данные значки поощряют сотрудников за проявление корпоративных компетенций в работе, что в дальнейшем позволит сформировать профиль достижений сотрудника.
             </div>
             <div className='badges-page__badges _small'>
-              <BadgeComponent small/>
-              <BadgeComponent small/>
-              <BadgeComponent small/>
-              <BadgeComponent small/>
-              <BadgeComponent small/>
-              <BadgeComponent small/>
-              <BadgeComponent small/>
-              <BadgeComponent small/>
+              {normalElements}
             </div>
           </BadgesPageBlock>
         </div>
@@ -47,4 +64,10 @@ class BadgesPage extends Component {
   }
 }
 
-export default BadgesPage;
+function mapStateToProps(state) {
+  return {
+    badges: state.badges.badges
+  };
+}
+
+export default connect(mapStateToProps, null)(BadgesPage);

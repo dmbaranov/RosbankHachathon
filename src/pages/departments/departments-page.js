@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ReactTable from 'react-table';
 import DepartmentsPageBlock from 'components/departments-page-block/departments-page-block';
 import DepartmentsPageEmptyBlock from 'components/departments-page-empty-block/departments-page-empty-block';
@@ -26,32 +27,18 @@ const columns = [{
   }]
 }];
 
-const data = [{
-  name: 'Иванов И.И.',
-  position: 'Менеджер',
-  points: 30,
-  madeContracts: 15,
-  clients: 27,
-  contractsSum: 10000
-}, {
-  name: 'Петров П.П.',
-  position: 'Кто-то',
-  points: 60,
-  madeContracts: 25,
-  clients: 37,
-  contractsSum: 30000
-}, {
-  name: 'Михайлов М.М.',
-  position: 'Энибади',
-  points: 10,
-  madeContracts: 5,
-  clients: 7,
-  contractsSum: 300
-}];
-
-
 class DepartmentsPage extends Component {
   render() {
+    const data = this.props.users.map(item => {
+      return {
+        name: `${item.name} ${item.surname}`,
+        position: item.position,
+        points: item.points,
+        madeContracts: item.contracts_count,
+        clients: item.clients_count,
+        contractsSum: item.contracts_sum
+      };
+    });
     return (
       <div className='departments-page'>
         <div className='departments-page__wrapper'>
@@ -74,4 +61,11 @@ class DepartmentsPage extends Component {
   }
 }
 
-export default DepartmentsPage;
+function mapStateToProps(state) {
+  return {
+    users: state.user.allUsers
+  };
+}
+
+export default connect(mapStateToProps, null)(DepartmentsPage);
+// export default DepartmentsPage;

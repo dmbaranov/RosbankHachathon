@@ -9,7 +9,6 @@ import RecentActivity from 'components/recent-activity/recent-activity';
 
 class ProfilePage extends Component {
   render() {
-    console.log(this.props.user);
     return (
       <div className='profile-page'>
         <div className='profile-page__wrapper'>
@@ -17,7 +16,7 @@ class ProfilePage extends Component {
             <ProfileCard user={this.props.user}/>
           </ProfileBlock>
           <ProfileBlock>
-            <ProfileInventory data={this.props.user}/>
+            <ProfileInventory data={this.props.user} badges={['1', '2', '3', '13', '14']}/>
           </ProfileBlock>
           <DailyTasks/>
           <RecentActivity/>
@@ -30,7 +29,8 @@ class ProfilePage extends Component {
 
 function mapStateToProps(state) {
   return {
-    user: state.user.user
+    user: state.user.user,
+    badges: state.badges
   };
 }
 

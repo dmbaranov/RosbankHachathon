@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 class Department extends Component {
   render() {
     const department = require(`static/img/department${this.props.place}.png`);
-    // console.log(this.props.place);
     return (
       <div className='department'>
         <img src={department}/>

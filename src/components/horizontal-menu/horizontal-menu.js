@@ -14,7 +14,7 @@ class HorizontalMenu extends Component {
             </div>
           </div>
           <div className='horizontal-menu__container _right'>
-            <div className='horizontal-menu__name'>Добро пожаловать, Елена</div>
+            <div className='horizontal-menu__name'>Добро пожаловать, Василий</div>
             <div className='horizontal-menu__exit'>Выход</div>
           </div>
         </div>

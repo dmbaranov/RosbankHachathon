@@ -7,6 +7,8 @@ import VerticalMenu from 'components/vertical-menu/vertical-menu';
 import HorizontalMenu from 'components/horizontal-menu/horizontal-menu';
 
 import * as profileActions from 'actions/profile-actions.js';
+import * as badgesActions from 'actions/badges-actions.js';
+import * as marketActions from 'actions/market-actions.js';
 
 class AppContainer extends Component {
   constructor() {
@@ -17,6 +19,8 @@ class AppContainer extends Component {
   componentDidMount() {
     this.props.profileActions.getCurrentProfile();
     this.props.profileActions.getAllUsers();
+    this.props.badgesActions.getBadges();
+    // this.props.marketActions.getGoods();
   }
 
   render() {
@@ -42,7 +46,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    profileActions: bindActionCreators(profileActions, dispatch)
+    profileActions: bindActionCreators(profileActions, dispatch),
+    badgesActions: bindActionCreators(badgesActions, dispatch),
+    marketActions: bindActionCreators(marketActions, dispatch)
   };
 }
 
