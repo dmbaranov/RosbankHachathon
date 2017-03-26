@@ -5,6 +5,7 @@
   color: black;
 
   background: #e2cf91;
+  box-shadow: 1px 4px 16px 0 black;
 
   @include xs-col(24);
   @include row();
@@ -17,7 +18,7 @@
     width: 150px;
     height: 100px;
 
-    color: #e2cf91;
+    color: #e29320;
     text-align: center;
 
     background: white;
@@ -37,6 +38,16 @@
 
     @include xs-col(4);
     @include xs-offset(1);
+
+    &-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &-position {
+      font-size: 14px;
+      font-weight: bold;
+    }
 
     &-avatar img {
       width: 60%;
@@ -61,22 +72,25 @@
   &__welcome {
     margin-top: 25px;
 
+    color: #a25353;
+
     @include xs-col(24);
 
     &-title {
-      color: white;
-      text-align: left;
-      text-transform: uppercase;
-      font-size: 30px;
+      text-align: center;
+      font-size: 24px;
       font-weight: 500;
       letter-spacing: 1px;
     }
 
     &-text {
-      padding: 30px;
+      padding-top: 10px;
+      padding-bottom: 30px;
 
-      color: #8c6435;
       font-size: 20px;
+      text-align: center;
+
+      @include xs-col(24);
     }
   }
 }

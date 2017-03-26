@@ -2,19 +2,26 @@ import React, {Component} from 'react';
 import {Link} from 'react-router';
 import ReactSVG from 'react-svg';
 import profile from 'static/img/profile.svg';
+import market from 'static/img/market-icon.svg';
+import department from 'static/img/department-icon.svg';
+import badge from 'static/img/badge-icon.svg';
 
 class VerticalMenu extends Component {
   static MENU_BUTTONS = [{
     label: 'Профиль',
+    icon: profile,
     url: '/profile'
   }, {
     label: 'Отдел',
+    icon: department,
     url: '/departments'
   }, {
     label: 'Маркет',
+    icon: market,
     url: '/market'
   }, {
     label: 'Значки',
+    icon: badge,
     url: '/badges'
   }];
 
@@ -34,7 +41,7 @@ class VerticalMenu extends Component {
               key={index}
               className='vertical-menu__item'>
           <div className='vertical-menu__item-icon'>
-            <ReactSVG path={profile}/>
+            <ReactSVG path={item.icon}/>
           </div>
           <div className='vertical-menu__item-text'>
             {item.label}

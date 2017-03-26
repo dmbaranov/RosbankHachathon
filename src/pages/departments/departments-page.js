@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactTable from 'react-table'
+import ReactTable from 'react-table';
 import DepartmentsPageBlock from 'components/departments-page-block/departments-page-block';
 import DepartmentsPageEmptyBlock from 'components/departments-page-empty-block/departments-page-empty-block';
 import employeesFlag from 'static/img/employees-flag.png';

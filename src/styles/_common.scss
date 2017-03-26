@@ -1,5 +1,6 @@
 html, body, #root {
   width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -18,4 +19,8 @@ html {
   @include mq-lg {
     font-size: 16px;
   }
+}
+
+.rt-td {
+  text-align: center;
 }

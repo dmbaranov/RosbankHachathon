@@ -1,4 +1,5 @@
 .daily-tasks {
+  color: black;
   @include xs-col(24);
 
   &__header {
@@ -9,10 +10,15 @@
     color: #967e48;
     line-height: 26px;
 
-    background: #e2cf91;
+    //background: #e2cf91;
+    background: white;
     border-radius: 5px;
 
     &-title {
+      position: relative;
+      top: 20px;
+      left: -43px;
+
       text-align: center;
       font-size: 26px;
 
@@ -20,11 +26,15 @@
     }
 
     &-current {
+      margin-top: 30px;
+
       text-align: left;
       @include xs-col(12, 0);
     }
 
     &-completed {
+      margin-top: 30px;
+
       @include xs-col(5, 0);
       @include xs-offset(1);
     }
@@ -55,15 +65,49 @@
     }
 
     &-progress {
+      position: relative;
+
       @include xs-col(12, 0);
+
+      &:after {
+        position: absolute;
+        top: 25px;
+        right: 21px;
+
+        width: 50px;
+
+        color: black;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+
+        content: '15 баллов';
+      }
 
       & img {
         width: 100%;
         height: auto;
       }
 
-      &._completed img {
-        width: 103%;
+      &._completed {
+        &:after {
+          position: absolute;
+          top: 46px;
+          right: 26px;
+
+          width: 50px;
+
+          color: black;
+          text-align: center;
+          font-size: 16px;
+          font-weight: bold;
+
+          content: '15 баллов';
+        }
+
+        & img {
+          width: 103%;
+        }
       }
     }
 

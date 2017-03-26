@@ -15,7 +15,9 @@ class MarketItem extends Component {
           <img src={itemImage}/>
         </div>
         <div className='market-item__title'>Название</div>
-        <RaisedButton fullWidth label='Купить' buttonStyle={{background: '#b1ba1d', borderRadius: '5px'}}/>
+        <RaisedButton fullWidth label='Купить'
+                      labelStyle={{color: 'white'}}
+                      buttonStyle={{background: '#b1ba1d', borderRadius: '5px'}}/>
       </div>
     );
   }

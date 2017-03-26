@@ -1,7 +1,7 @@
 .profile-inventory {
   position: relative;
 
-  padding-bottom: 40px;
+  padding-bottom: 70px;
 
   color: black;
 
@@ -12,10 +12,18 @@
     margin-right: 60px;
 
     &-title {
+      position: relative;
+
       text-align: center;
       font-size: 20px;
       font-weight: bold;
       padding: 20px;
+
+      & img {
+        position: relative;
+        top: 0;
+        left: -60px;
+      }
     }
 
     &-content {
@@ -24,6 +32,10 @@
       display: flex;
       flex-wrap: wrap;
       height: 100%;
+
+      &._wallet {
+        width: 150px;
+      }
     }
 
     &-coins-image {
@@ -34,7 +46,7 @@
     }
 
     &-coins-amount {
-      margin-top: -10px;
+      margin-top: -30px;
 
       padding-bottom: 10px;
 
